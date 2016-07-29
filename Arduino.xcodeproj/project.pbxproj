@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07E312FA183BB18B5FA9CB4B /* Pods_Arduino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7676552992837F122FE88478 /* Pods_Arduino.framework */; };
 		6F13544E1CF8B051003DD6E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13544D1CF8B051003DD6E9 /* AppDelegate.swift */; };
 		6F1354501CF8B051003DD6E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13544F1CF8B051003DD6E9 /* ViewController.swift */; };
 		6F1354531CF8B051003DD6E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F1354511CF8B051003DD6E9 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D3B92D89CE7C31983ECD824 /* Pods-Arduino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino.release.xcconfig"; path = "Pods/Target Support Files/Pods-Arduino/Pods-Arduino.release.xcconfig"; sourceTree = "<group>"; };
+		433F5DB9E4F9A98D961CFF7A /* Pods-Arduino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Arduino/Pods-Arduino.debug.xcconfig"; sourceTree = "<group>"; };
 		6F13544A1CF8B050003DD6E9 /* Arduino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arduino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F13544D1CF8B051003DD6E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F13544F1CF8B051003DD6E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		6F1354541CF8B051003DD6E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F1354571CF8B051003DD6E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F1354591CF8B051003DD6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7676552992837F122FE88478 /* Pods_Arduino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arduino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E312FA183BB18B5FA9CB4B /* Pods_Arduino.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C91250A3C065E3F45F0D690 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				433F5DB9E4F9A98D961CFF7A /* Pods-Arduino.debug.xcconfig */,
+				1D3B92D89CE7C31983ECD824 /* Pods-Arduino.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6F1354411CF8B050003DD6E9 = {
 			isa = PBXGroup;
 			children = (
 				6F13544C1CF8B051003DD6E9 /* Arduino */,
 				6F13544B1CF8B050003DD6E9 /* Products */,
+				0C91250A3C065E3F45F0D690 /* Pods */,
+				9471B740EAA27FABA1F5676B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = Arduino;
 			sourceTree = "<group>";
 		};
+		9471B740EAA27FABA1F5676B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7676552992837F122FE88478 /* Pods_Arduino.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F13545C1CF8B051003DD6E9 /* Build configuration list for PBXNativeTarget "Arduino" */;
 			buildPhases = (
+				588F1B8B8A34A11E15F5A4F7 /* 📦 Check Pods Manifest.lock */,
 				6F1354461CF8B050003DD6E9 /* Sources */,
 				6F1354471CF8B050003DD6E9 /* Frameworks */,
 				6F1354481CF8B050003DD6E9 /* Resources */,
+				4985EDA4BBDD2A9341475FC5 /* 📦 Embed Pods Frameworks */,
+				36B5BC96FC1439B8ED7FEEB8 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36B5BC96FC1439B8ED7FEEB8 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Arduino/Pods-Arduino-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4985EDA4BBDD2A9341475FC5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Arduino/Pods-Arduino-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		588F1B8B8A34A11E15F5A4F7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F1354461CF8B050003DD6E9 /* Sources */ = {
@@ -248,6 +323,7 @@
 		};
 		6F13545D1CF8B051003DD6E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 433F5DB9E4F9A98D961CFF7A /* Pods-Arduino.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Arduino/Info.plist;
@@ -259,6 +335,7 @@
 		};
 		6F13545E1CF8B051003DD6E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D3B92D89CE7C31983ECD824 /* Pods-Arduino.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Arduino/Info.plist;
@@ -287,6 +364,7 @@
 				6F13545E1CF8B051003DD6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

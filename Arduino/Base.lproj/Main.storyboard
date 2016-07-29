@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Arduino" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado de la Luz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUO-bn-G7V">
+                                <rect key="frame" x="189" y="113" width="222" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="fra-UP-t3p"/>
+                                    <constraint firstAttribute="width" constant="222" id="kuc-6v-DoG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apagado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-S7-Kg5">
+                                <rect key="frame" x="242" y="189" width="117" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="BLJ-zU-ll6"/>
+                                    <constraint firstAttribute="width" constant="117" id="jcl-A4-0e8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7xi-zu-4Od">
+                                <rect key="frame" x="276" y="218" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchButtonChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="kso-cH-jXJ"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7xi-zu-4Od" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IET-Ts-Lde"/>
+                            <constraint firstItem="7xi-zu-4Od" firstAttribute="top" secondItem="fQx-S7-Kg5" secondAttribute="bottom" constant="8" id="N8i-I3-cNV"/>
+                            <constraint firstItem="BUO-bn-G7V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="Tre-h2-wKO"/>
+                            <constraint firstItem="BUO-bn-G7V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lKw-jT-TJw"/>
+                            <constraint firstItem="fQx-S7-Kg5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rnc-dZ-dVM"/>
+                            <constraint firstItem="fQx-S7-Kg5" firstAttribute="top" secondItem="BUO-bn-G7V" secondAttribute="bottom" constant="48" id="xXi-jw-ZhK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="switchButton" destination="7xi-zu-4Od" id="9cC-PW-kdy"/>
+                        <outlet property="textLabel" destination="fQx-S7-Kg5" id="kxr-aZ-ONm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="387" y="311"/>
         </scene>
     </scenes>
 </document>
